@@ -1,0 +1,14 @@
+tsc -v
+tsc -t "es5" filename
+
+-p "./" all ts files to be compiled in a given directory
+-w watch for compilation
+
+-- Show defaults tsconfig.json
+
+-- allowUnreachableCode unreachable code
+-- noFallthroughCasesInSwitch switch
+-- removeComments
+-- allowUnusedLabels
+
+

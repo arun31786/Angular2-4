@@ -1,0 +1,19 @@
+Using tsconfig.json
+
+1.  By invoking tsc with no input files, 
+    the compiler searches for the tsconfig.json 
+    file starting in the current directory and 
+    continuing up the parent directory chain.
+
+2.  By invoking tsc with no input files and 
+    a --project (or just -p) command line option 
+    that specifies the path of a directory containing 
+    a tsconfig.json file.
+
+
+
+Read tsconfig.json:
+1. In same directory                            : tsc -p ./
+2. In other directory                           : tsc -p path_to_config_json_file
+3.  Starting in the current directory and       : tsc
+    continuing up the parent directory chain

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "system",
+        "declaration": false,
+        "removeComments": false,
+        "noLib": false,
+        "allowUnusedLabels":true,        
+        "allowUnreachableCode": true,
+        "sourceMap": true,
+        "diagnostics":true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true
+    }
+}
