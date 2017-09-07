@@ -1,0 +1,7 @@
+Modules and namespaces both are modules.
+Modules: Modules provide the possibility to group related logic, encapsulate it, structure your code and prevent pollution of the global namespace.
+
+============================================
+"Internal modules" becomes "Namespaces"
+"External modules" becomes "Modules"
+============================================

@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es3",
+        "module": "commonjs",
+        "removeComments": true,
+		"sourceMap": false,
+        "outDir":"./bin"
+    }
+}

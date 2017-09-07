@@ -1,0 +1,68 @@
+TypeScript
+----------
+npm init
+npm install typescript --save
+
+compile
+	tsc --module commonjs app.ts
+
+npm install -g tsd  
+tsd install jquery --save  
+tsc --module commonjs typings/tsd.d.ts 
+
+
+tsconfig.json
+	{
+	  "compilerOptions": {
+		"module": "commonjs"
+	  },
+	  "files": [
+		"app.ts",
+		"typings/tsd.d.ts"
+	  ]
+	}
+	
+compile:
+	tsc
+	
+
+Webpack
+--------
+npm install -g webpack
+npm install ts-loader --save
+
+webpack.config.js
+	var webpack = require('webpack');  
+	module.exports = {  
+	  entry: './app.ts',
+	  output: {
+		filename: 'bundle.js'
+	  },
+	  // Turn on sourcemaps
+	  devtool: 'source-map',
+	  resolve: {
+		extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+	  },
+	  // Add minification
+	  plugins: [
+		new webpack.optimize.UglifyJsPlugin()
+	  ],
+	  module: {
+		loaders: [
+		  { test: /\.ts$/, loader: 'ts' }
+		]
+	  }
+	}	
+	
+	Next we need to tell TypeScript to generate sourcemaps
+	{
+	  "compilerOptions": {
+		"module": "commonjs",
+		"sourceMap": true
+	  },
+	  "files": [
+		...
+	  ]
+	}
+run
+	webpack

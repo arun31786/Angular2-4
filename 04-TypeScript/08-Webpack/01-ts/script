@@ -1,0 +1,28 @@
+compile app.ts
+	tsc --module commonjs app.ts 
+
+
+TypeScript will complain that it cannot find the module jquery
+We need to somehow tell TypeScript what jQuery is
+
+1.
+	// 1. Install typings
+	npm install typings -g
+	// 2. Download jquery.d.ts (run this command in the root dir of your project)
+	typings install dt~jquery --global --save
+OR	
+2.
+	npm install --save-dev @types/jquery
+
+
+// we used first way
+
+compile
+	tsc --module commonjs typings/index.d.ts  
+	
+	
+	
+	tsc --module commonjs app.ts 
+	tsc --module commonjs typings/index.d.ts  
+	
+	We have used tsconfig.json file. Use tsc to compile app.ts and output will be in bin folder

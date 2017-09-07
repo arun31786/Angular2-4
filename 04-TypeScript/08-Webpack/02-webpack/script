@@ -1,0 +1,8 @@
+npm i --save-dev webpack
+npm i ts-loader --save-dev
+npm i typescript --save-dev
+
+webpack.config.js
+
+add script in package.json
+"webpack": "node_modules/.bin/webpack"
