@@ -51,11 +51,12 @@
 		* -g makes dependency as global
 		* tsc -v
 		* https://www.typescriptlang.org/docs/handbook/compiler-options.html
-* angular1 vs angular2
 * angular2 code
 
 
-
+## Day 3
+* Angular 1.x vs Angular 2.x vs React
+* Angular2
 
 
 
