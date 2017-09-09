@@ -1,0 +1,18 @@
+<h2>Dropdown page</h2>
+
+<div class={{dropdownClass}}>
+    <button (click)="handleChange()" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="open">
+      {{selectedCountry || 'Select your country'}}
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+      <span *ngFor="let country of list">
+          <app-item [country]="country" (changeTitleEvent)="handleChangeTitle($event)"></app-item>
+      </span>
+
+<!--       <li *ngFor="let country of list">
+        <a href="#">{{country}}</a>
+      </li> -->
+    </ul>
+  </div>
