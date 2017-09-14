@@ -1,0 +1,40 @@
+<html>
+    <head>
+<style>
+        div.outer li {  
+           color: red;  
+        } 
+        div.outer{  
+           border: solid 1px;  padding: 1em; 
+        }
+     </style>
+    </head>
+    <body>
+    <div id="outer">
+        How about some cool demo, eh ?
+        <div class="cursiveButton">
+            My Awesome Button
+        </div>
+    </div>
+    
+    <template>
+        <button>
+            <content select=".cursiveButton">Fallback Content</content>
+        </button>
+        <style>
+            button{
+                font-family: cursive;
+                font-size: 24px; 
+                color: red;
+            }    
+        </style>
+    </template>
+
+    <script>
+        var shadowRoot = document.querySelector("#outer").createShadowRoot();
+        var template = document.querySelector("template");
+        shadowRoot.appendChild(template.content.cloneNode(true));
+        // template.remove();
+    </script>
+
+    </body></html>

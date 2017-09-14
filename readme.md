@@ -56,8 +56,30 @@
 
 ## Day 3
 * Angular 1.x vs Angular 2.x vs React
-* Angular2
+* Bootstrap Badge
+* Data binding
+* One way binding
+* Event binding
+* Angular2 cli
 
+## Day 4
+* Bootstrap Dropdown
+* Nested Components
+* Custom Event Binding
+* Custom Property Binding
+
+## Day 5
+* Shadow Dom
+	* Shadow Host & Shadow Root
+		* <b>Shadow Host</b>: is the DOM element which is hosting the Shadow DOM subtree or it is the DOM node which contains the Shadow Root.
+		* <b>Shadow Root</b>: is the root of the DOM subtree containing the shadow DOM nodes. It is a special node, which creates the boundary between the normal DOM nodes and the Shadow DOM nodes. It is this boundary, which encapsulates the Shadow DOM nodes from any JavaScript or CSS code on the consuming page.
+		* <b>Shadow DOM</b>: allows for multiple DOM subtrees to be composed into one larger tree. Following images from the W3C working draft best explains the concept of overlaying the nodes. This is how it looks before the Shadow Root's content are attached to Shadow Host element:
+* Directives
+	* Structural 
+	* Attribute
+* Introduction to Pipes
+	* Built in pipes and demo
+	* Writing custom pipes for filtering data
 
 
 

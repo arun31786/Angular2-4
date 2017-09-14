@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>ShadowDom</title>
+    </head>
+    <body>
+        <div id="welcome">Welcome to Document world</div>
+
+        <script>
+            var shadowHost = document.getElementById('welcome');
+            var shadowRoot = shadowHost.createShadowRoot();
+            shadowRoot.textContent = "Shadow Dom is working";
+
+            console.log(shadowHost.textContent)
+        </script>
+    </body>
+</html>

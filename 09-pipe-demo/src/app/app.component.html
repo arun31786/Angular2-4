@@ -1,0 +1,21 @@
+<h2>Pipe</h2>
+{{myName | uppercase}}<br/>
+{{myName | lowercase}}<br/>
+{{date | date}}<br/>
+{{date | date:"MMM/dd/yy"}}
+
+
+<h2>Custom Pipe</h2>
+<input type="number" #number (keyup)="0" value="0"/>
+<input type="number" #exponent (keyup)="0" value="0"/>
+
+<p>Square of {{number.value}}: {{number.value | power}}</p>
+<p>{{number.value}}^{{exponent.value}}: {{number.value | power:exponent.value}}</p>
+
+
+
+<hr/>
+<h2>Capitalize</h2>
+
+JAIsuRya sReenIvaSan : Jaisurya sreenivasan
+[]: starts with

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <style>
+        div.outer li {
+            color: red;
+        }
+
+        div.outer {
+            border: solid 1px;
+            padding: 1em;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="outer">
+        <div id="welcomeMessage">Welcome to My World</div>
+        <div class="normalTree">Sample List
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </div>
+    </div>
+
+    
+<script type="text/javascript">
+    var shadowHost = document.querySelector("#welcomeMessage");
+    var shadowRoot = shadowHost.createShadowRoot();
+    shadowRoot.innerHTML = `<style>
+        @host{ 
+        #welcomeMessage{ 
+            font-size: 28px;
+            font-family:cursive;
+            font-weight:bold;
+            }
+        }
+        </style>
+        <content select=''>
+        </content>`;
+
+</script>
+
+</body>
+
+</html>

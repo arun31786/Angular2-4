@@ -1,0 +1,66 @@
+<h1>{{title}}</h1>
+
+<h3>ngIf - {{isLoggedIn}}</h3>
+
+<button *ngIf="isLoggedIn" (click)="toggle()">Logout</button>
+<button *ngIf="!isLoggedIn" (click)="toggle()">Login</button>
+
+
+<h3>ngFor</h3>
+<div *ngFor="let item of items">
+    <a href="#">{{item}}</a>
+</div>
+
+<h3>Switch</h3>
+
+<ol [ngSwitch]="value">
+    <li *ngSwitchCase="5">Less than 10</li>
+    <li *ngSwitchCase="10">Equals to 10</li>
+    <!-- <li *ngSwitchCase="15">Greater than 10</li> -->
+    <ng-template [ngSwitchCase]="15">
+        <li>Greater than 10<li>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+        <li>Not a valid number<li>
+    </ng-template>
+</ol>
+
+
+<h2>ngClass/ngStyle</h2>
+<div [ngStyle]="cssStyle">
+    Some text with some inline css
+</div>
+<div [ngClass]="'cssClass'">
+    Some text with some css class
+</div>
+
+<h2>Custom attribute directive</h2>
+<div [highlight]="" 
+        [defaultColor] = "'red'">
+            Some Text Here
+</div>
+<br/><br/><br/><br/><br/><br/><br/>
+
+
+<h2>Pipe Demo</h2>
+<ul>
+    <li>{{myName | uppercase}}</li>
+    <li>{{myName | slice:0:5}}</li>
+    <li>{{today | date:"MMM/dd/yy"}}</li>
+    <li>{{today | date:"MM/dd/yyyy"}}</li>
+    <li>
+        <input type="text" #newItem />
+        <button (click)="cities.push(newItem.value);newItem.value=''">Add Item</button>
+        <ul>
+            <li *ngFor="let city of cities ">{{city}}</li>
+        </ul>
+    </li>
+
+    <li>
+        <h3>Custom Pipe (Power/Capitalize)</h3>
+        <input type="number" value="0" placeholder="Enter any number" #num (keyup)="0"/>
+        <input type="number" value="1" placeholder="Enter any exponent" #exponent (keyup)="0"/>
+        <p>Square: {{num.value | power}}
+        <p>Power: {{num.value | power:exponent.value}}
+    </li>
+</ul>

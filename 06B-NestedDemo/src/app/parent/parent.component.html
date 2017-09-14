@@ -1,0 +1,10 @@
+<div id="parent">
+
+        <input type="text" value={{username}} (keyup)='0' #name (blur)="handleChildText(name.value)" />
+        <!-- <h2>Welcome: {{username}}</h2> -->
+        <h2>Welcome: {{name.value}}</h2>
+        
+        
+        <app-child [username]="username" (childEvent)="handleChildText($event)"></app-child>
+        
+</div>

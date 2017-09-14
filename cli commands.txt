@@ -1,0 +1,27 @@
+Installation
+    npm install -g @angular/cli
+
+Updating Angular CLI
+    npm uninstall -g @angular/cli
+    npm cache clean
+    npm install -g @angular/cli@latest
+
+Generating and serving an Angular project
+    ng new PROJECT-NAME
+    cd PROJECT-NAME
+    server/start
+        ng serve
+        npm start
+
+You can find all possible blueprints in the table below:
+
+    Scaffold	Usage
+    Component	ng g component my-new-component
+    Directive	ng g directive my-new-directive
+    Pipe	    ng g pipe my-new-pipe
+    Service	    ng g service my-new-service
+    Class	    ng g class my-new-class
+    Guard	    ng g guard my-new-guard
+    Interface	ng g interface my-new-interface
+    Enum	    ng g enum my-new-enum
+    Module	    ng g module my-module
