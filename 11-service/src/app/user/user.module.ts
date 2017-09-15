@@ -5,6 +5,7 @@ import {routing} from "./user.routing";
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UserService } from "./user.service";
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { UserService } from "./user.service";
     routing
   ],
   providers: [UserService],
-  declarations: [RegistrationComponent, LoginComponent]
+  declarations: [RegistrationComponent, LoginComponent, WelcomeComponent]
 })
 export class UserModule { }

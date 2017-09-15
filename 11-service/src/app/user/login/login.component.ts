@@ -13,7 +13,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.userService);
-    this.userService.name = 'Rajeev';
+    // this.userService.name = 'Rajeev';
+  }
+
+  someLogic(name){
+    console.log("Name is "+name);
+    this.userService.name = name;
   }
 
 }

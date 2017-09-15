@@ -1,4 +1,6 @@
-<p>
-  user login works!
-</p>
-{{userService | json}}
+<form>
+  <label>Username</label>
+  <input type="text" #username (keyup)="0" placeholder="Enter your name"/>
+
+  <button type="button" (click)="someLogic(username.value)">Submit</button>
+</form>
