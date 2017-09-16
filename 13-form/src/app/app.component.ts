@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles:[`
+	button{
+	    display: block;
+		width: 100%;
+	}
+  `]
 })
 export class AppComponent {
-  title = 'app';
+	isTemplateDriven = false;
 }

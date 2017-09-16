@@ -53,3 +53,10 @@
 	Firefox
 
 
+How to create node project
+	npm init
+	create server.js
+	node server.js
+	install dependencies
+		npm i -S express body-parser cors
+		npm i (all package.json dependencies)
