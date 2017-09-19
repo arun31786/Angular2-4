@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <p>
+          header works! {{auth.isLoggedIn | json}}
+        </p>          
+        <button *ngIf="auth.isLoggedIn" class="btn btn-danger" (click)="onLogout()">Logout</button>
+        <button *ngIf="!auth.isLoggedIn" class="btn btn-primary">Login</button>
+    </div>
+</div>

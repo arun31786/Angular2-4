@@ -19,13 +19,13 @@ export class AppComponent {
   }
   ngOnInit(){
     console.log('on init');
-    this.http.get("//localhost:4545/getAllUsers")
+    this.http.get("http://localhost:8080/getAllUsers")
       .map(function(res:Response){
         return res.json();
       })
       .subscribe((data)=>{
         console.log(data);
-        this.users = data;
+        this.users = data.users;
       })
   }
 }

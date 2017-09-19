@@ -1,0 +1,20 @@
+
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <nav class="col-sm-3">
+            <ul>
+                <li><a routerLink="home">Home</a></li>
+                <li><a routerLink="about">About</a></li>
+                <li><a routerLink="user/login">Login</a></li>
+                <li><a routerLink="user/welcome">Welcome</a></li>
+            </ul>
+        </nav>
+        <section class="col-sm-8">
+            <router-outlet></router-outlet>
+            <!-- <p>Main section</p> -->
+        </section>
+    </div>
+</div>
+
+<app-footer></app-footer>
