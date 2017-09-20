@@ -1,1 +1,30 @@
 <h1>Template Driven</h1>
+<form #f='ngForm' (ngSubmit)="  onSubmit(f)">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" 
+            class="form-control" 
+            id="email" 
+            placeholder="Email"
+            [(ngModel)]="user.userid"
+            name="userid"
+            required
+            />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" 
+            class="form-control" 
+            id="password"
+            placeholder="Password"
+            [(ngModel)]="user.password"
+            name="password"
+            pattern="[0-9]+"
+            #pwd="ngModel"
+            required
+            />
+            <p *ngIf="!pwd.valid" class="text-danger">Invalid password, only digits allowed</p>
+    </div>
+ 
+    <button type="submit" class="btn btn-default" [disabled]="!f.valid">Login</button>
+  </form>

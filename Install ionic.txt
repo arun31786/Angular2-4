@@ -1,0 +1,11 @@
+Install nodejs6 or greater
+	$ npm install -g ionic cordova
+	
+	$ ionic start projectName templateName
+		tabs (default), sidemenu, blank, super, tutorial
+	
+	$ cd projectName
+	$ ionic serve
+
+	
+	
